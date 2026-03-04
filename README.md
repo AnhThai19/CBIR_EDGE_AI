@@ -93,16 +93,16 @@ Dataset gồm các sản phẩm công nghệ như:
 ---
 
 ## 🔄 Pipeline Chuyển Đổi Mô Hình
-```PyTorch (.pth)```
+```PyTorch (.pth)
 │
 ▼
-```ONNX (.onnx)```
+ONNX (.onnx)
 │
 ▼
-```TensorFlow```
+TensorFlow
 │
 ▼
-```TensorFlow Lite (.tflite)```
+TensorFlow Lite (.tflite)```
 
 
 ---
