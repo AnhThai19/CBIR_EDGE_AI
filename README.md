@@ -166,4 +166,4 @@ CBIR_ON_EDGE_DEVICE
 │
 └── README.md
 ```
-## 📷 Ảnh Minh Họa ![Kiến trúc hệ thống](mobile_app/assets/architecture.png)
+## 📷 Ảnh Minh Họa ![Kiến trúc hệ thống](mobile_app/assets/picture1.jpg)
