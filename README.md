@@ -93,16 +93,16 @@ Dataset gồm các sản phẩm công nghệ như:
 ---
 
 ## 🔄 Pipeline Chuyển Đổi Mô Hình
-'PyTorch (.pth)'
+```PyTorch (.pth)```
 │
 ▼
-'ONNX (.onnx)'
+```ONNX (.onnx)```
 │
 ▼
-'TensorFlow'
+```TensorFlow```
 │
 ▼
-'TensorFlow Lite (.tflite)'
+```TensorFlow Lite (.tflite)```
 
 
 ---
@@ -115,14 +115,19 @@ Dataset gồm các sản phẩm công nghệ như:
 - Hiển thị các ảnh tương tự nhất  
 
 **Pipeline trên Mobile**
-Ảnh đầu vào
+```Ảnh đầu vào```
 │
-Resize → CenterCrop → Normalize
+```Resize → CenterCrop → Normalize```
 │
-TFLite Inference
+```TFLite Inference```
 │
-Embedding Vector
+```Embedding Vector```
 │
-Cosine Similarity
+```Cosine Similarity```
 │
-Top-K ảnh tương tự
+```Top-K ảnh tương tự```
+
+Toàn bộ quá trình xử lý được thực hiện trực tiếp trên thiết bị, giúp:
+- Tốc độ xử lý nhanh
+- Bảo mật dữ liệu tốt hơn
+- Hoạt động hoàn toàn offline
