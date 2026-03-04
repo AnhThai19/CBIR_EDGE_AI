@@ -66,7 +66,7 @@ Dataset gồm các sản phẩm công nghệ như:
 - Số lớp: ~25  
 - Số lượng ảnh: ~4000  
 
-**Cấu trúc dataset**
+**Cấu trúc dataset : **
             dataset/
             train/
             val/
@@ -93,16 +93,16 @@ Dataset gồm các sản phẩm công nghệ như:
 ---
 
 ## 🔄 Pipeline Chuyển Đổi Mô Hình
-PyTorch (.pth)
+'PyTorch (.pth)'
 │
 ▼
-ONNX (.onnx)
+'ONNX (.onnx)'
 │
 ▼
-TensorFlow
+'TensorFlow'
 │
 ▼
-TensorFlow Lite (.tflite)
+'TensorFlow Lite (.tflite)'
 
 
 ---
