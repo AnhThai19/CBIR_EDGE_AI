@@ -23,23 +23,23 @@ The highlight of the project is deploying AI directly on mobile devices (**Edge 
 
 ## 🧠 System Architecture
 ```
-Ảnh từ người dùng (Camera / Gallery)
+User Image (Camera / Gallery)
 │
 ▼
-Tiền xử lý ảnh
+Image Preprocessing
 Resize → CenterCrop → Normalize
 │
 ▼
-Mô hình MobileNetV3 (.tflite)
+MobileNetV3 Model (.tflite)
 │
 ▼
-Vector đặc trưng (Embedding 256 chiều)
+Feature Vector (256-dim Embedding)
 │
 ▼
-So khớp Cosine Similarity
+Cosine Similarity Matching
 │
 ▼
-Top-K ảnh tương tự
+Top-K Similar Images
 ```
 
 ---
@@ -119,7 +119,7 @@ The mobile app allows:
 
 **Pipeline on Mobile**
 ```
-Ảnh đầu vào
+Input Image
 │
 Resize → CenterCrop → Normalize
 │
@@ -129,7 +129,7 @@ Embedding Vector
 │
 Cosine Similarity
 │
-Top-K ảnh tương tự
+Top-K Similar Images
 ```
 
 All processing is performed directly on the device, ensuring:
@@ -144,9 +144,9 @@ All processing is performed directly on the device, ensuring:
 CBIR_ON_EDGE_DEVICE
 │
 ├── notebooks
-│   ├── mobilenetv3_small.ipynb     # huấn luyện mô hình
-│   ├── convert_file.ipynb          # chuyển đổi model
-│   └── preprocessing.ipynb         # trích xuất embedding dataset
+│   ├── mobilenetv3_small.ipynb     # model training
+│   ├── convert_file.ipynb          # model conversion
+│   └── preprocessing.ipynb         # embedding extraction
 │
 ├── model
 │   ├── best_model.pth
@@ -163,7 +163,7 @@ CBIR_ON_EDGE_DEVICE
 │   ├── val
 │   └── test
 │
-├── vectors.json                    # database embedding
+├── vectors.json                    # embedding database 
 │
 └── README.md
 ```
