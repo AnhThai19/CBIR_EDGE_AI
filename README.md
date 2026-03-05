@@ -1,27 +1,27 @@
 # 📱 CBIR_EDGE_AI
-Hệ Thống Tìm Kiếm Hình Ảnh Bằng Deep Learning (CBIR) Triển Khai Trên Thiết Bị Di Động
+Content-Based Image Retrieval (CBIR) System Using Deep Learning Deployed on Mobile Devices
 
-Dự án xây dựng hệ thống tìm kiếm hình ảnh dựa trên nội dung (Content-Based Image Retrieval - CBIR) cho các thiết bị công nghệ.
+This project builds a content-based image retrieval (CBIR) system for technology products.
 
-Thay vì tìm kiếm bằng văn bản, hệ thống cho phép người dùng tìm các sản phẩm tương tự bằng chính hình ảnh.
+Instead of searching by text, the system allows users to find similar products using images.
 
-Mô hình Deep Learning được huấn luyện để trích xuất vector đặc trưng (embedding) từ ảnh, sau đó sử dụng **Cosine Similarity** để tìm các ảnh có nội dung tương tự.
+A Deep Learning model is trained to extract feature vectors (embeddings) from images, then uses **Cosine Similarity** to find images with similar content.
 
-Điểm nổi bật của dự án là triển khai AI trực tiếp trên thiết bị di động (**Edge AI**) bằng TensorFlow Lite, giúp hệ thống hoạt động offline và không cần server.
-
----
-
-## 🚀 Tính Năng Chính
-- 🔍 Tìm kiếm hình ảnh dựa trên độ tương đồng nội dung  
-- 🧠 Trích xuất đặc trưng bằng Deep Learning (MobileNetV3)  
-- 📱 Chạy AI trực tiếp trên thiết bị di động  
-- ⚡ Tìm kiếm nhanh bằng Cosine Similarity  
-- 🌐 Hoạt động offline không cần Internet  
-- 📦 Lưu trữ embedding dataset dưới dạng `vectors.json`  
+The highlight of the project is deploying AI directly on mobile devices (**Edge AI**) with TensorFlow Lite, enabling offline operation without a server.
 
 ---
 
-## 🧠 Kiến Trúc Hệ Thống
+## 🚀 Key Features
+- 🔍 Image search based on content similarity  
+- 🧠 Feature extraction using Deep Learning (MobileNetV3)  
+- 📱 AI runs directly on mobile devices  
+- ⚡ Fast search with Cosine Similarity  
+- 🌐 Works offline without Internet  
+- 📦 Embedding dataset stored as `vectors.json`  
+
+---
+
+## 🧠 System Architecture
 ```
 Ảnh từ người dùng (Camera / Gallery)
 │
@@ -44,16 +44,16 @@ Top-K ảnh tương tự
 
 ---
 
-## 🛠 Công Nghệ Sử Dụng
+## 🛠 Technologies Used
 - **Machine Learning**: PyTorch, MobileNetV3-Small, Triplet Loss  
-- **Chuyển đổi mô hình**: ONNX → TensorFlow → TensorFlow Lite  
+- **Model Conversion**: ONNX → TensorFlow → TensorFlow Lite  
 - **Mobile Application**: React Native (Expo), `react-native-fast-tflite`  
-- **Xử lý dữ liệu**: Python, NumPy, PIL  
+- **Data Processing**: Python, NumPy, PIL  
 
 ---
 
 ## 📊 Dataset
-Dataset gồm các sản phẩm công nghệ như:
+Dataset includes technology products such as:
 - Smartphone  
 - Laptop  
 - Keyboard  
@@ -61,13 +61,13 @@ Dataset gồm các sản phẩm công nghệ như:
 - Monitor  
 - Server Rack  
 - Smartwatch  
-- Các thiết bị điện tử khác  
+- Other electronic devices  
 
-**Thống kê dataset**  
-- Số lớp: ~25  
-- Số lượng ảnh: ~4000  
+**Dataset Statistics**  
+- Number of classes: ~25  
+- Number of images: ~4000 
 
-**Cấu trúc dataset : **
+**Dataset Structure**
 ```
 dataset/
 - train/
@@ -77,8 +77,8 @@ dataset/
 
 ---
 
-## 🧪 Huấn Luyện Mô Hình
-- **Backbone**: MobileNetV3-Small (pretrained ImageNet)  
+## 🧪 Model Training
+- **Backbone**: MobileNetV3-Small (pretrained on ImageNet)  
 - **Loss**: Triplet Margin Loss  
 - **Optimizer**: AdamW  
 - **Input size**: 224×224  
@@ -94,7 +94,7 @@ dataset/
 
 ---
 
-## 🔄 Pipeline Chuyển Đổi Mô Hình
+## 🔄 Model Conversion Pipeline
 ```
 PyTorch (.pth)
 │
@@ -110,14 +110,14 @@ TensorFlow Lite (.tflite)
 
 ---
 
-## 📱 Ứng Dụng Di Động
-Ứng dụng mobile cho phép:
-- Chụp ảnh bằng camera  
-- Chọn ảnh từ thư viện  
-- Chạy inference trực tiếp trên thiết bị  
-- Hiển thị các ảnh tương tự nhất  
+## 📱 Mobile Application
+The mobile app allows:
+- Capture images via camera  
+- Select images from gallery  
+- Run inference directly on device  
+- Display most similar images  
 
-**Pipeline trên Mobile**
+**Pipeline on Mobile**
 ```
 Ảnh đầu vào
 │
@@ -132,13 +132,14 @@ Cosine Similarity
 Top-K ảnh tương tự
 ```
 
-Toàn bộ quá trình xử lý được thực hiện trực tiếp trên thiết bị, giúp:
-- Tốc độ xử lý nhanh
-- Bảo mật dữ liệu tốt hơn
-- Hoạt động hoàn toàn offline
+All processing is performed directly on the device, ensuring:
+- Faster response time  
+- Better data privacy  
+- Fully offline operation  
 
+---
 
-📁 Cấu Trúc Project
+## 📁 Project Structure
 ```
 CBIR_ON_EDGE_DEVICE
 │
@@ -166,5 +167,5 @@ CBIR_ON_EDGE_DEVICE
 │
 └── README.md
 ```
-## 📷 Ảnh Minh Họa 
-![Kiến trúc hệ thống](mobile_app/assets/picture1.jpg)
+## 📷 Illustration
+![System Architecture](mobile_app/assets/picture1.jpg)
